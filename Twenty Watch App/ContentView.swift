@@ -9,34 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(
-            alignment: .leading,
-            spacing: 0
-        ) {
-            ScrollView {
-                HStack {
-                    Text("Twenty")
-                        .foregroundColor(.accentColor)
-                        .font(.system(size: 24))
-                    Spacer()
-                }
-                
-                Text("It's another day at Apple Developer Academy. Don't forget to rest your eyes every 20 minutes with us!")
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity)
-                    .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
-                
-                Spacer()
-                
-                Button("Start") {
+        NavigationView {
+            VStack(
+                alignment: .leading,
+                spacing: 0
+            ) {
+                ScrollView {
+                    Text("It's another day at the Apple Developer Academy. Don't forget to rest your eyes every 20 minutes with us!")
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity)
+                        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                     
+                    Spacer()
+                    NavigationLink(destination: ScheduleView()) {
+                        Text("Start")
+                    }
+                    .tint(.accentColor)
                 }
-                .tint(.accentColor)
             }
+            .navigationTitle("Twenty")
         }
-        .edgesIgnoringSafeArea(.bottom)
-        .frame(maxHeight: .infinity)
-        .padding()
     }
 }
 
