@@ -30,6 +30,7 @@ struct ContentView: View {
             }
             .navigationTitle("Twenty")
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
