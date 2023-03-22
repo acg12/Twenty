@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ScheduleView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var selectedHours: Int = 1
     @State private var selectedMinutes: Int = 0
     @State private var isButtonEnabled = false
+    
+    private var utils = UtilsModel()
     
     var body: some View {
         VStack {
             Text("How long are you working today?")
                 .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
                 .foregroundColor(.gray)
             
             VStack {
@@ -25,28 +29,27 @@ struct ScheduleView: View {
                             Text("\(hour)")
                         }
                     }
-                    .frame(width: 70)
+                    .frame(width: 70, height: 80)
                     
                     Picker("Minutes", selection: $selectedMinutes) {
-                        ForEach(0...59, id: \.self) { minute in
+                        ForEach(1...59, id: \.self) { minute in
                             Text("\(minute)")
                         }
                     }
-                    .frame(width: 70)
-                    
-//                    NavigationLink(
-//                        destination: nil,
-//                        isActive: $isButtonEnabled,
-//                        label: {
-//                            Text("Go to Detail View")
-//                        }
-//                    )
+                    .frame(width: 70, height: 80)
                 }
-                .padding()
+                .padding(EdgeInsets(top: 4, leading: 0, bottom: 8, trailing: 0))
+                
+                Button("Schedule now") {
+                    let totalSeconds = utils.getSeconds(hours: selectedHours, minutes: selectedMinutes)
+                    UserDefaults.standard.set(totalSeconds, forKey: "time")
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                .tint(.accentColor)
+                .clipShape(Capsule())
             }
-            
-            Spacer()
         }
+        .frame(maxWidth: .infinity)
     }
     
 }

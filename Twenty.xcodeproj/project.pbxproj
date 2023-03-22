@@ -16,6 +16,7 @@
 		0B18941729C867BC00C0368C /* Twenty_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18941629C867BC00C0368C /* Twenty_Watch_AppUITests.swift */; };
 		0B18941929C867BC00C0368C /* Twenty_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18941829C867BC00C0368C /* Twenty_Watch_AppUITestsLaunchTests.swift */; };
 		0B8DD6C229C98B630030ABA2 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DD6C129C98B630030ABA2 /* ScheduleView.swift */; };
+		0B8DD6C629C9BFAC0030ABA2 /* UtilsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DD6C529C9BFAC0030ABA2 /* UtilsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0B18941629C867BC00C0368C /* Twenty_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twenty_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		0B18941829C867BC00C0368C /* Twenty_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twenty_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0B8DD6C129C98B630030ABA2 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		0B8DD6C529C9BFAC0030ABA2 /* UtilsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				0B1893FB29C867BB00C0368C /* TwentyApp.swift */,
-				0B1893FD29C867BB00C0368C /* ContentView.swift */,
-				0B8DD6C129C98B630030ABA2 /* ScheduleView.swift */,
+				0B8DD6C429C9BF8F0030ABA2 /* View */,
+				0B8DD6C329C9BF790030ABA2 /* Models */,
 				0B1893FF29C867BC00C0368C /* Assets.xcassets */,
 				0B18940129C867BC00C0368C /* Preview Content */,
 			);
@@ -152,6 +154,23 @@
 				0B18941829C867BC00C0368C /* Twenty_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Twenty Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		0B8DD6C329C9BF790030ABA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B8DD6C529C9BFAC0030ABA2 /* UtilsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B8DD6C429C9BF8F0030ABA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B1893FD29C867BB00C0368C /* ContentView.swift */,
+				0B8DD6C129C98B630030ABA2 /* ScheduleView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1893FE29C867BB00C0368C /* ContentView.swift in Sources */,
+				0B8DD6C629C9BFAC0030ABA2 /* UtilsModel.swift in Sources */,
 				0B1893FC29C867BB00C0368C /* TwentyApp.swift in Sources */,
 				0B8DD6C229C98B630030ABA2 /* ScheduleView.swift in Sources */,
 			);
